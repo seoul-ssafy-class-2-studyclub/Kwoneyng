@@ -1,43 +1,13 @@
-for T in range(10):
-    stack = []
-    n = int(input())
-    st = input()
-    rs = 0
-    for i in st:
-        if i == '(':
-            stack.append(')')
-        elif i == '[':
-            stack.append(']')
-        elif i == '{':
-            stack.append('}')
-        elif i == '<':
-            stack.append('>')
-        elif i == ')':
-            if stack.pop() == ')':
-                continue
-            else :
-                rs == 0
-                break
-        elif i == '}':
-            if stack.pop() == '}':
-                continue
-            else : 
-                rs = 0
-                break
-        elif i == ']':
-            if stack.pop() == ']':
-                continue
-            else:
-                rs = 0
-                break
-        elif i == '>':
-            if stack.pop() == '>':
-                continue
-            else :
-                rs = 0
-                break
-    if len(stack) == 0 :
-        rs = 1
-    print(f'#{T+1} ',end='')
-    print(rs)
-                 
+for T in range(int(input())):
+    kind, limit = list(map(int, input().split()))
+    food =[]
+    for i in range(kind):
+        food.append(list(map(int, input().split())))
+    print(food)
+    kcal = [0]*(limit+1)
+    for i in food:
+        kcal[i[1]] = i[0]
+    print(kcal)
+    cals = [i[1] for i in food]
+    # for i in range(1001):
+    print(cals)

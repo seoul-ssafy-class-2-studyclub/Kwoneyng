@@ -1,5 +1,3 @@
-import time
-
 def fnr(ls, end=0):
     if end == 99:
         return 1
